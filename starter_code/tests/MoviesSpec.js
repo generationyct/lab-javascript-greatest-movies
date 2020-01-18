@@ -19,9 +19,9 @@ describe("Order the movies by year - orderByYear", function() {
     expect(orderByYear(arr)).not.toBe(arr);
   });
 
-  it("Should return the element in a single element array", function() {
-    expect(orderByYear([{ year: 1982 }])).toEqual([{ year: 1982 }]);
-  });
+  // it("Should return the element in a single element array", function() {
+  //   expect(orderByYear([{ year: 1982 }])).toEqual([{ year: 1982 }]);
+  // });
 
   it("Return the new array in ascending order", function() {
     expect(

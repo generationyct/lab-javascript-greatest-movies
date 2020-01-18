@@ -2967,3 +2967,20 @@ let movies = [
       "rate": 8
     }
   ]
+
+
+const orderByYear = (array) => {
+  const sortedByTitle = array.sort((a, b) => a.title.localeCompare(b.title))
+  const sortedByYear = sortedByTitle.sort((a, b) => a.year - b.year)
+  return sortedByYear
+}
+  
+console.log(orderByYear(movies))
+
+// const orderByYear = (array) => {
+//   const sortedByYearArray = array.sort((a, b) => a.year - b.year)
+//   const sortedByTitle = sortedByYearArray.sort((a, b) => a.title - b.title)
+//   return sortedByTitle
+// }
+  
+// console.log(orderByYear(movies))
