@@ -2,9 +2,22 @@
 
 // Iteration 1: Ordering by year - Order by year, ascending (in growing order)
 
-const orderByYear = ()
+// The function below works, makes a deep clone and sorts on year and then on title
+
+let moviesSortedClone =[]
+
+  const orderByYear = (array) => {
+    moviesSortedClone = JSON.parse(JSON.stringify(array))
+    moviesSortedClone = array.sort((a, b) => a.title.localeCompare(b.title))
+    moviesSortedClone.sort((a, b) => a.year - b.year)
+  }
+  
+  orderByYear(movies)
+  console.log(moviesSortedClone)
 
 // Iteration 2: Steven Spielberg. The best? - How many drama movies did STEVEN SPIELBERG direct
+
+
 
 // Iteration 3: Alphabetic Order - Order by title and print the first 20 titles
 

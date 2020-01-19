@@ -2969,19 +2969,13 @@ let movies = [
   ]
 
 
-const orderByYear = (array) => {
-  const sortedByTitle = array.sort((a, b) => a.title.localeCompare(b.title))
-  const sortedByYear = sortedByTitle.sort((a, b) => a.year - b.year)
-  return sortedByYear
-}
-  
-console.log(orderByYear(movies))
+ let moviesSortedClone =[]
 
-
-// const orderByYear = (array) => {
-//   const sortedByYearArray = array.sort((a, b) => a.year - b.year)
-//   const sortedByTitle = sortedByYearArray.sort((a, b) => a.title - b.title)
-//   return sortedByTitle
-// }
+  const orderByYear = (array) => {
+    moviesSortedClone = JSON.parse(JSON.stringify(array))
+    moviesSortedClone = array.sort((a, b) => a.title.localeCompare(b.title))
+    moviesSortedClone.sort((a, b) => a.year - b.year)
+  }
   
-// console.log(orderByYear(movies))
+  orderByYear(movies)
+  console.log(moviesSortedClone)
