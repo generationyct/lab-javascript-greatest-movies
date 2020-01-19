@@ -2977,6 +2977,7 @@ const orderByYear = (array) => {
   
 console.log(orderByYear(movies))
 
+
 // const orderByYear = (array) => {
 //   const sortedByYearArray = array.sort((a, b) => a.year - b.year)
 //   const sortedByTitle = sortedByYearArray.sort((a, b) => a.title - b.title)
